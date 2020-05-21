@@ -1,6 +1,6 @@
 # Tweet your current playing song on Spotify
 
-This is a basic `Deno` app that it will tweet your current playing song on Spotify to your Twitter account.
+:bird: :notes: Basic `Deno` 🦖 app that it will tweet your current playing song on Spotify to your Twitter account.
 
 ## basic usage
 
