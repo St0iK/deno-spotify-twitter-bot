@@ -1,18 +1,14 @@
 # Tweet your current playing song on Spotify
 
-:bird: :notes: Basic `Deno` 🦖 app that it will tweet your current playing song on Spotify to your Twitter account.
+This is a basic `Deno` app that it will tweet your current playing song on Spotify to your Twitter account.
+
+* https://deno.land/
+* https://deno.land/x/deno_twitter_api
 
 ## basic usage
 
-This boilerplate uses `make` to run the Deno commands.
-It is usually already installed on your Unix OS.
-
-You can use the following commands:
-- `make run`:      executes the `index.ts`
-- `make test`:     runs the tests
-- `make format`:   formats all your files
-- `make debug`:    runs the debugger starting in the `index.ts`
-- `make bundle`:   bundles your project into a single file in `build/index`
+- `deno run index.ts`:
+- `deno bundle index.ts build/index`
 
 ## Simple logger pre-configured
 
