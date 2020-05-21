@@ -13,3 +13,8 @@ This is a basic `Deno` app that it will tweet your current playing song on Spoti
 ## Simple logger pre-configured
 
 In `src/log.ts` you can find a simple logger that is extendable.
+
+
+### Get Information About The User's Current Playback on Spotify
+
+https://developer.spotify.com/console/get-user-player/?market=&additional_types=
