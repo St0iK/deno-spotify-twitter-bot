@@ -7,7 +7,7 @@ This is a basic `Deno` app that it will tweet your current playing song on Spoti
 
 ## basic usage
 
-- `deno run index.ts`:
+- `deno run index.ts`
 - `deno bundle index.ts build/index`
 
 ## Simple logger pre-configured
