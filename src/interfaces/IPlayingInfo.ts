@@ -3,5 +3,6 @@ export default interface IPlayingInfo {
   item?: {
     name: string;
     artist: string;
+    url: string;
   };
 }

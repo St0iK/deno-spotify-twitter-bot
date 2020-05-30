@@ -24,22 +24,14 @@ const main = async () => {
       // set current playing info
       currentPlayingInfo = playingInfo;
 
+
       let twitterApi = new TwitterApi(twitterKeys);
-      // lets send a tweet now.
+      // send a tweet with the currently playing song
+      let postResult = await twitterApi.post("statuses/update.json", {
+        status: `🎵 Currently playing: ${playingInfo.item.name} from ${playingInfo.item.artist}. Check it out: ${playingInfo.item.url}`
+      });
     }
   }, 1000);
-
-  let twitterApi = new TwitterApi(twitterKeys);
-  // send a tweet with the currently playing song
-  let userTimeline = await twitterApi.get("statuses/user_timeline.json", {
-    user_id: "19025957",
-    screen_name: "TTCnotices",
-    count: "20",
-    trim_user: "true",
-    tweet_mode: "extended", // Used to prevent truncating tweets
-  });
-
-  console.log(await userTimeline.json());
 };
 
 /**
@@ -59,12 +51,13 @@ const getCurrentSong = async (
       },
     });
 
-    const { is_playing:isPlaying, item } = await res.json();
+    const { is_playing: isPlaying, item } = await res.json();
     return {
       isPlaying: isPlaying,
       item: {
         name: item.name,
         artist: item.artists[0].name,
+        url: item.external_urls.spotify,
       },
     };
   } catch (e) {
